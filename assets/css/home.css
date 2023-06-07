@@ -1,0 +1,44 @@
+nav {
+    background-color: black;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    margin: 2vh auto;
+}
+
+.articleContain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 1%;
+    justify-content: center;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 1vh 0;
+}

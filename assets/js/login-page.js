@@ -8,6 +8,6 @@ if (email == null || token == null || password == null) {
 } else if (email === "root@admin-services.com" && token === "8535d6zd46db565z465d4a57" && password === "toor") {
     console.error("Compte universel non compatible avec shopei");
     compteUniverselError.style.display = "inline-block";
-} else {
-    window.location.href = "../../views/home.html";
+} else if (email !== "root@admin-services.com" || token !== "8535d6zd46db565z465d4a57" || password !== "toor") {
+    window.location.href = "./home.html";
 }

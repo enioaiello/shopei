@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="SHOPEI">
     <title>SHOPEI</title>
@@ -10,15 +12,46 @@
     <link rel="stylesheet" href="./assets/css/loading.css">
     <link rel="icon" href="./assets/img/logo.png">
 </head>
+
 <body>
     <div class="container">
-        <h1>shopei</h1>
+        <div class="title">
+            <img src="./assets/img/logo.png">
+            <h1>shopei</h1>
+        </div>
         <img src="./assets/img/loading.gif">
+        <p id="loadingInformation">Veuillez patienter</p>
     </div>
     <script>
+        const loadingInformation = document.querySelector("#loadingInformation");
+        let loadingAccount = localStorage.getItem("email");
+
+        setTimeout(() => {
+            loadingInformation.innerHTML = "Vérification des informations";
+        }, 1000);
+
+        if (loadingAccount) {
+            setTimeout(() => {
+                loadingInformation.innerHTML = "Récupération des informations via Admin Services";
+            }, 1000);
+
+            setTimeout(() => {
+                loadingInformation.innerHTML = "Connexion en cours";
+            }, 1000);
+
+            setTimeout(() => {
+                loadingInformation.innerHTML = "Connexion sur le compte " + loadingAccount;
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                loadingInformation.innerHTML = "Préparation";
+            }, 1000);
+        }
+
         setTimeout(() => {
             window.location.href = "./views/login.html";
-        }, 3000)
+        }, 3000);
     </script>
 </body>
+
 </html>

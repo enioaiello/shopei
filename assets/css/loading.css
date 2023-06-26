@@ -11,11 +11,19 @@ body {
     flex-direction: column;
 }
 
+.title {
+    text-align: center;
+}
+
 .container h1 {
     margin: 5vh 0;
     text-transform: uppercase;
 }
 
-.container img {
+.container #logo {
+    width: 35%;
+}
+
+.container #loading {
     width: 2.5%;
 }

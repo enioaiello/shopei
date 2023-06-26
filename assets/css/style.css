@@ -6,3 +6,7 @@
     scroll-behavior: smooth;
     transition: 200ms;
 }
+
+.headingSmiley {
+    font-size: 2rem;
+}
